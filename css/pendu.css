@@ -1,7 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
-body{
-    min-width: 375px;
-}
 .container {
     display: none;
     width: auto;
@@ -20,19 +17,6 @@ body{
     font-weight: bold;
     border: 3px solid #160f0a;
     border-radius: 20px;
-}
-
-.mute, .demute{
-    padding: 5px 15px;
-    font-size: 20px;
-    font-weight: bold;
-    border: 3px solid #160f0a;
-    border-radius: 10px;
-}
-.mute:hover, .demute:hover{
-    transition: 0.3s;
-    background-color: brown;
-    box-shadow: inset 0px 0px 20px black;
 }
 .start:hover, .rejouer:hover {
     transition: 0.3s;
@@ -57,12 +41,10 @@ body{
     transition: 0.3s;
     background-color: brown;
     box-shadow: inset 0px 0px 20px black;
-    font-size: 35px;
-    margin-right: -29px;
 }
 
-.menu, .seriesText {
-    font-size: 30px;
+.menu, .seriesText, .mute, .demute {
+    font-size: 25px;
     text-decoration: none;
     padding: 1px 16px;
     font-weight: bold;
@@ -71,10 +53,17 @@ body{
     color: black;
     background-color: brown;
 }
+.mute:hover, .demute:hover{
+    transition: 0.3s;
+    background-color: brown;
+    box-shadow: inset 0px 0px 20px black;
+}
+.mute{
+background-color: white;
+}
 
 .seriesText{
     background-color: green;
-    font-size:25px;
 }
 
 /* html */
@@ -86,10 +75,15 @@ html {
 }
 
 body {
+    margin: 5px 0px;
+    height: 100vh;
     display: flex;
+    justify-content: space-around;
     flex-direction: column;
     align-items: center;
+    min-width: 375px;
 }
+
 .top{
     width: 1463px;
     display: flex;
@@ -124,7 +118,8 @@ header p {
 
 /* "Mot a deviner */
 header h1 {
-    flex-grow: 0.86;
+    flex-grow: 1;
+    padding-right: 168px;
     font-family: Amatic SC;
     letter-spacing: 5px;
     font-size: 50px;

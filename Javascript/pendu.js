@@ -14,14 +14,16 @@ function mute() {
 function win() {
     audioMain.pause();
     $(".clavier, .deviner, .mute, .demute").css("display", "none");
-    $("header h1").css("flex-grow","1");
     $(".main").html("<audio class=main src=sons/victory.mp3 autoplay></audio>");
+    $("header p").css("display","none");
+    $("header h1").css("padding-right","0");
     $("header").css("background-color", "green");
     $(".rejouer").css("display", "flex");
     serie++;
     $(".series").text(serie);
     localStorage.setItem("serie", serie);
     $(".maj").attr('src','images/error/victory.png');
+
 }
 function penduPlusUn() {
     erreur++;
@@ -103,8 +105,9 @@ function start() {
                         if (erreur === 7) {
                             $(".clavier, .deviner, .mute, .demute").css("display", "none");
                             $(".rejouer").css("display", "flex");
-                            $("header h1").css("flex-grow","1");
-                            $(".leMot").text("Tu as perdu ! Le mot était '" + motSansAccents + "'");
+                            $(".leMot").text("perdu ! Le mot était '" + motSansAccents + "'");
+                            $("header p").css("display","none");
+                            $("header h1").css("padding-right","0");
                             $("header").css("background-color", "brown");
                             serie=0;
                             localStorage.setItem("serie", serie);
@@ -139,9 +142,10 @@ function start() {
 
                     if (erreur === 7) {
                         $(".clavier, .deviner, .mute, .demute").css("display", "none");
-                        $("header h1").css("flex-grow","1");
                         $(".rejouer").css("display", "flex");
-                        $(".leMot").text("Tu as perdu ! Le mot était '" + motSansAccents + "'");
+                        $(".leMot").text("Perdu ! Le mot était '" + motSansAccents + "'");
+                        $("header p").css("display","none");
+                        $("header h1").css("padding-right","0");
                         $("header").css("background-color", "brown");
                         serie=0;
                         localStorage.setItem("serie", serie);
